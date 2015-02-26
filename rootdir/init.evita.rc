@@ -180,6 +180,11 @@ on boot
     chmod 0664 /sys/class/timed_output/vibrator/voltage_level
     restorecon /sys/class/timed_output/vibrator/voltage_level
 
+    # LiveDisplay
+    chown system system /sys/devices/virtual/graphics/fb0/rgb
+    chmod 0660 /sys/devices/virtual/graphics/fb0/rgb
+    restorecon /sys/devices/virtual/graphics/fb0/rgb
+
     # Cyttsp update
     write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
 
