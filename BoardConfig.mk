@@ -50,6 +50,9 @@ ifeq ($(HOST_OS),linux)
     WITH_DEXPREOPT := true
 endif
 
+# Low-ram optimizations
+PAC_LOW_RAM_DEVICE := true
+
 # cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p23: 000ffa00 00000200 "misc"
