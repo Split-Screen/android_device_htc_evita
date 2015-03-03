@@ -45,6 +45,11 @@ BOARD_PROVIDES_LIBRIL := true
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
+# Dex-preoptimization
+ifeq ($(HOST_OS),linux)
+    WITH_DEXPREOPT := true
+endif
+
 # cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p23: 000ffa00 00000200 "misc"
