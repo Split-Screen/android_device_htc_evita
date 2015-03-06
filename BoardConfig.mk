@@ -45,11 +45,6 @@ BOARD_PROVIDES_LIBRIL := true
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
-# Dex-preoptimization
-ifeq ($(HOST_OS),linux)
-    WITH_DEXPREOPT := true
-endif
-
 # Low-ram optimizations
 PAC_LOW_RAM_DEVICE := true
 
