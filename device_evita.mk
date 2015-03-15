@@ -26,6 +26,12 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.target.rc
 
+# F2FS
+PRODUCT_PACKAGES += \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
+
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
     NFCEE_ACCESS_PATH := device/htc/evita/configs/nfcee_access.xml
