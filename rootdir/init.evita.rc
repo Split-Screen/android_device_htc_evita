@@ -5,20 +5,9 @@ on early-init
     mkdir /mnt/usbdisk 0755 system system
 
 on init
-    # External storage directories
-    mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
-    mkdir /mnt/media_rw/usbdisk 0700 media_rw media_rw
-
-    mkdir /storage/sdcard0 0700 root root
-    mkdir /storage/usbdisk 0700 root root
-
     # For backwards compatibility
-    symlink /storage/sdcard0 /sdcard
-    symlink /storage/sdcard0 /mnt/sdcard
-    symlink /storage/usbdisk /usbdisk
-    symlink /storage/usbdisk /mnt/usbdisk
-
-    export EXTERNAL_STORAGE /storage/sdcard0
+    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
 
     mkdir /devlog 0700 root root
 
@@ -192,14 +181,6 @@ on boot
     write /sys/keyboard/vol_wakeup 1
 
 # Services start here
-
-service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
-    class late_start
-    disabled
-
-service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
-    class late_start
-    disabled
 
 service akmd /system/bin/akmd
     class main
