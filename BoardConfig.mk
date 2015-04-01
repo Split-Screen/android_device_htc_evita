@@ -108,7 +108,6 @@ BOARD_USES_LEGACY_MMAP := true
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/htc/evita/sepolicy
-BOARD_SEPOLICY_UNION += akmd.te ewtzmud.te kernel.te
 
 # Vendor
 BOARD_VENDOR := htc
