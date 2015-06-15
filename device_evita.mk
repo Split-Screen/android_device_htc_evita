@@ -156,7 +156,86 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/WCNSS_qcom_cfg.ini:/system/etc/wifi/WCNSS_qcom_cfg.ini
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/s4-common/s4-common-vendor.mk)
+PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/etc/agps_rm:/system/etc/agps_rm \
+    device/htc/evita/prebuilt/bin/akmd:/system/bin/akmd \
+    device/htc/evita/prebuilt/bin/charging:/system/bin/charging \
+    device/htc/evita/prebuilt/bin/hci_qcomm_init:/system/bin/hci_qcomm_init \
+    device/htc/evita/prebuilt/bin/mm-qcamera-daemon:/system/bin/mm-qcamera-daemon \
+    device/htc/evita/prebuilt/bin/mpdecision:/system/bin/mpdecision \
+    device/htc/evita/prebuilt/bin/rmt_storage:/system/bin/rmt_storage \
+    device/htc/evita/prebuilt/bin/thermald:/system/bin/thermald \
+    device/htc/evita/prebuilt/lib/libacdbloader.so:/system/lib/libacdbloader.so \
+    device/htc/evita/prebuilt/lib/libaudcal.so:/system/lib/libaudcal.so \
+    device/htc/evita/prebuilt/lib/hw/camera.vendor.msm8960.so:/system/lib/hw/camera.vendor.msm8960.so \
+    device/htc/evita/prebuilt/lib/libBeautyChat.so:/system/lib/libBeautyChat.so \
+    device/htc/evita/prebuilt/lib/libcameraasd.so:/system/lib/libcameraasd.so \
+    device/htc/evita/prebuilt/lib/libcameraface.so:/system/lib/libcameraface.so \
+    device/htc/evita/prebuilt/lib/libcamerapp.so:/system/lib/libcamerapp.so \
+    device/htc/evita/prebuilt/lib/libcam_oem_plugin.so:/system/lib/libcam_oem_plugin.so \
+    device/htc/evita/prebuilt/lib/libgemini.so:/system/lib/libgemini.so \
+    device/htc/evita/prebuilt/lib/libHTC_DIS.so:/system/lib/libHTC_DIS.so \
+    device/htc/evita/prebuilt/lib/libhtccamera.so:/system/lib/libhtccamera.so \
+    device/htc/evita/prebuilt/lib/libimage-jpeg-dec-omx-comp.so:/system/lib/libimage-jpeg-dec-omx-comp.so \
+    device/htc/evita/prebuilt/lib/libimage-jpeg-enc-omx-comp.so:/system/lib/libimage-jpeg-enc-omx-comp.so \
+    device/htc/evita/prebuilt/lib/libimage-omx-common.so:/system/lib/libimage-omx-common.so \
+    device/htc/evita/prebuilt/lib/libmmcamera_faceproc.so:/system/lib/libmmcamera_faceproc.so \
+    device/htc/evita/prebuilt/lib/libmmcamera_frameproc.so:/system/lib/libmmcamera_frameproc.so \
+    device/htc/evita/prebuilt/lib/libmmcamera_hdr_lib.so:/system/lib/libmmcamera_hdr_lib.so \
+    device/htc/evita/prebuilt/lib/libmmcamera_image_stab.so:/system/lib/libmmcamera_image_stab.so \
+    device/htc/evita/prebuilt/lib/libmmcamera_interface2.so:/system/lib/libmmcamera_interface2.so \
+    device/htc/evita/prebuilt/lib/libmmcamera_rawchipproc.so:/system/lib/libmmcamera_rawchipproc.so \
+    device/htc/evita/prebuilt/lib/libmmcamera_statsproc31.so:/system/lib/libmmcamera_statsproc31.so \
+    device/htc/evita/prebuilt/lib/libmmcamera_wavelet_lib.so:/system/lib/libmmcamera_wavelet_lib.so \
+    device/htc/evita/prebuilt/lib/libmmipl.so:/system/lib/libmmipl.so \
+    device/htc/evita/prebuilt/lib/libmmjpeg.so:/system/lib/libmmjpeg.so \
+    device/htc/evita/prebuilt/lib/libmmmpod.so:/system/lib/libmmmpod.so \
+    device/htc/evita/prebuilt/lib/libmmstillomx.so:/system/lib/libmmstillomx.so \
+    device/htc/evita/prebuilt/lib/liboemcamera.so:/system/lib/liboemcamera.so \
+    device/htc/evita/prebuilt/lib/libposteffect.so:/system/lib/libposteffect.so \
+    device/htc/evita/prebuilt/lib/libgeofence.so:/system/lib/libgeofence.so \
+    device/htc/evita/prebuilt/lib/libloc_api_v02.so:/system/lib/libloc_api_v02.so \
+    device/htc/evita/prebuilt/vendor/lib/egl/eglsubAndroid.so:/system/vendor/lib/egl/eglsubAndroid.so \
+    device/htc/evita/prebuilt/vendor/lib/egl/libEGL_adreno.so:/system/vendor/lib/egl/libEGL_adreno.so \
+    device/htc/evita/prebuilt/vendor/lib/egl/libGLESv1_CM_adreno.so:/system/vendor/lib/egl/libGLESv1_CM_adreno.so \
+    device/htc/evita/prebuilt/vendor/lib/egl/libGLESv2_adreno.so:/system/vendor/lib/egl/libGLESv2_adreno.so \
+    device/htc/evita/prebuilt/vendor/lib/egl/libGLESv2S3D_adreno.so:/system/vendor/lib/egl/libGLESv2S3D_adreno.so \
+    device/htc/evita/prebuilt/vendor/lib/egl/libq3dtools_adreno.so:/system/vendor/lib/egl/libq3dtools_adreno.so \
+    device/htc/evita/prebuilt/vendor/lib/libadreno_utils.so:/system/vendor/lib/libadreno_utils.so \
+    device/htc/evita/prebuilt/vendor/lib/libc2d2_a3xx.so:/system/vendor/lib/libc2d2_a3xx.so \
+    device/htc/evita/prebuilt/vendor/lib/libc2d2_z180.so:/system/vendor/lib/libc2d2_z180.so \
+    device/htc/evita/prebuilt/vendor/lib/libC2D2.so:/system/vendor/lib/libC2D2.so \
+    device/htc/evita/prebuilt/vendor/lib/libCB.so:/system/vendor/lib/libCB.so \
+    device/htc/evita/prebuilt/vendor/lib/libgsl.so:/system/vendor/lib/libgsl.so \
+    device/htc/evita/prebuilt/vendor/lib/libllvm-a3xx.so:/system/vendor/lib/libllvm-a3xx.so \
+    device/htc/evita/prebuilt/vendor/lib/libOpenCL.so:/system/vendor/lib/libOpenCL.so \
+    device/htc/evita/prebuilt/vendor/lib/libOpenVG.so:/system/vendor/lib/libOpenVG.so \
+    device/htc/evita/prebuilt/vendor/lib/libsc-a2xx.so:/system/vendor/lib/libsc-a2xx.so \
+    device/htc/evita/prebuilt/etc/firmware/a225p5_pm4.fw:/system/etc/firmware/a225p5_pm4.fw \
+    device/htc/evita/prebuilt/etc/firmware/a225_pfp.fw:/system/etc/firmware/a225_pfp.fw \
+    device/htc/evita/prebuilt/etc/firmware/a225_pm4.fw:/system/etc/firmware/a225_pm4.fw \
+    device/htc/evita/prebuilt/etc/firmware/vidc_1080p.fw:/system/etc/firmware/vidc_1080p.fw \
+    device/htc/evita/prebuilt/lib/libExtendedExtractor.so:/system/lib/libExtendedExtractor.so \
+    device/htc/evita/prebuilt/lib/libI420colorconvert.so:/system/lib/libI420colorconvert.so \
+    device/htc/evita/prebuilt/lib/libmm-color-convertor.so:/system/lib/libmm-color-convertor.so \
+    device/htc/evita/prebuilt/vendor/lib/libqc-opt.so:/system/vendor/lib/libqc-opt.so \
+    device/htc/evita/prebuilt/lib/libdrmdecrypt.so:/system/lib/libdrmdecrypt.so \
+    device/htc/evita/prebuilt/vendor/lib/drm/libdrmwvmplugin.so:/system/vendor/lib/drm/libdrmwvmplugin.so \
+    device/htc/evita/prebuilt/vendor/lib/libdrmfs.so:/system/vendor/lib/libdrmfs.so \
+    device/htc/evita/prebuilt/vendor/lib/libdrmtime.so:/system/vendor/lib/libdrmtime.so \
+    device/htc/evita/prebuilt/vendor/lib/libQSEEComAPI.so:/system/vendor/lib/libQSEEComAPI.so \
+    device/htc/evita/prebuilt/vendor/lib/libwvdrm_L1.so:/system/vendor/lib/libwvdrm_L1.so \
+    device/htc/evita/prebuilt/vendor/lib/libwvm.so:/system/vendor/lib/libwvm.so \
+    device/htc/evita/prebuilt/vendor/lib/libWVStreamControlAPI_L1.so:/system/vendor/lib/libWVStreamControlAPI_L1.so \
+    device/htc/evita/prebuilt/vendor/lib/mediadrm/libwvdrmengine.so:/system/vendor/lib/mediadrm/libwvdrmengine.so \
+    device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_cfg.dat:/system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    device/htc/evita/prebuilt/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:/system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
+    device/htc/evita/prebuilt/etc/firmware/wcnss.b00:/system/etc/firmware/wcnss.b00 \
+    device/htc/evita/prebuilt/etc/firmware/wcnss.b01:/system/etc/firmware/wcnss.b01 \
+    device/htc/evita/prebuilt/etc/firmware/wcnss.b02:/system/etc/firmware/wcnss.b02 \
+    device/htc/evita/prebuilt/etc/firmware/wcnss.b04:/system/etc/firmware/wcnss.b04 \
+    device/htc/evita/prebuilt/etc/firmware/wcnss.b05:/system/etc/firmware/wcnss.b05 \
+    device/htc/evita/prebuilt/etc/firmware/wcnss.mdt:/system/etc/firmware/wcnss.mdt
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/evita/overlay
 
@@ -237,7 +316,41 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_LOCALES += en_US xhdpi
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/evita/evita-vendor.mk)
+PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/lib/libchromatix_s5k3h2yx_default_video.so:/system/lib/libchromatix_s5k3h2yx_default_video.so \
+    device/htc/evita/prebuilt/lib/libchromatix_s5k3h2yx_hdr.so:/system/lib/libchromatix_s5k3h2yx_hdr.so \
+    device/htc/evita/prebuilt/lib/libchromatix_s5k3h2yx_hfr.so:/system/lib/libchromatix_s5k3h2yx_hfr.so \
+    device/htc/evita/prebuilt/lib/libchromatix_s5k3h2yx_preview.so:/system/lib/libchromatix_s5k3h2yx_preview.so \
+    device/htc/evita/prebuilt/lib/libchromatix_s5k3h2yx_zsl.so:/system/lib/libchromatix_s5k3h2yx_zsl.so \
+    device/htc/evita/prebuilt/lib/libchromatix_s5k6a1gx_default_video.so:/system/lib/libchromatix_s5k6a1gx_default_video.so \
+    device/htc/evita/prebuilt/lib/libchromatix_s5k6a1gx_hdr.so:/system/lib/libchromatix_s5k6a1gx_hdr.so \
+    device/htc/evita/prebuilt/lib/libchromatix_s5k6a1gx_hfr.so:/system/lib/libchromatix_s5k6a1gx_hfr.so \
+    device/htc/evita/prebuilt/lib/libchromatix_s5k6a1gx_preview.so:/system/lib/libchromatix_s5k6a1gx_preview.so \
+    device/htc/evita/prebuilt/lib/libchromatix_s5k6a1gx_zsl.so:/system/lib/libchromatix_s5k6a1gx_zsl.so \
+    device/htc/evita/prebuilt/lib/hw/sensors.default.so:/system/lib/hw/sensors.default.so \
+    device/htc/evita/prebuilt/lib/libimu.so:/system/lib/libimu.so \
+    device/htc/evita/prebuilt/lib/libmllite.so:/system/lib/libmllite.so \
+    device/htc/evita/prebuilt/lib/libmlplatform.so:/system/lib/libmlplatform.so \
+    device/htc/evita/prebuilt/lib/libmpl.so:/system/lib/libmpl.so \
+    device/htc/evita/prebuilt/vendor/firmware/libpn544_fw.so:/system/vendor/firmware/libpn544_fw.so \
+    device/htc/evita/prebuilt/lib/hw/nfc.default.so:/system/lib/hw/nfc.default.so \
+    device/htc/evita/prebuilt/bin/netmgrd:/system/bin/netmgrd \
+    device/htc/evita/prebuilt/bin/qmuxd:/system/bin/qmuxd \
+    device/htc/evita/prebuilt/lib/libdiag.so:/system/lib/libdiag.so \
+    device/htc/evita/prebuilt/lib/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \
+    device/htc/evita/prebuilt/lib/libdsutils.so:/system/lib/libdsutils.so \
+    device/htc/evita/prebuilt/lib/libidl.so:/system/lib/libidl.so \
+    device/htc/evita/prebuilt/lib/libqdi.so:/system/lib/libqdi.so \
+    device/htc/evita/prebuilt/lib/libqdp.so:/system/lib/libqdp.so \
+    device/htc/evita/prebuilt/lib/libqmi_cci.so:/system/lib/libqmi_cci.so \
+    device/htc/evita/prebuilt/lib/libqmi_common_so.so:/system/lib/libqmi_common_so.so \
+    device/htc/evita/prebuilt/lib/libqmi_csi.so:/system/lib/libqmi_csi.so \
+    device/htc/evita/prebuilt/lib/libqmi_encdec.so:/system/lib/libqmi_encdec.so \
+    device/htc/evita/prebuilt/lib/libqmiservices.so:/system/lib/libqmiservices.so \
+    device/htc/evita/prebuilt/lib/libqmi.so:/system/lib/libqmi.so \
+    device/htc/evita/prebuilt/lib/libnetmgr.so:/system/lib/libnetmgr.so \
+    device/htc/evita/prebuilt/lib/libril-qc-qmi-1.so:/system/lib/libril-qc-qmi-1.so \
+    device/htc/evita/prebuilt/lib/libril-qcril-hook-oem.so:/system/lib/libril-qcril-hook-oem.so
 
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)

@@ -155,9 +155,6 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/prima_wlan/parameters/fwpath"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
-# inherit from the proprietary version
--include vendor/htc/s4-common/BoardConfigVendor.mk
-
 # Require bootloader version
 TARGET_BOARD_INFO_FILE ?= device/htc/evita/board-info.txt
 
