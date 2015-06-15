@@ -24,8 +24,88 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-# inherit from S4 common
--include device/htc/s4-common/BoardConfigCommon.mk
+# Inherit from common msm8960
+-include device/htc/msm8960-common/BoardConfigCommon.mk
+
+LOCAL_PATH := device/htc/evita
+
+TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
+
+# Kernel
+BOARD_KERNEL_BASE := 0x80400000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01700000
+TARGET_KERNEL_SOURCE := kernel/htc/msm8960
+
+# Audio
+AUDIO_FEATURE_ENABLED_FM := true
+BOARD_USES_FLUENCE_INCALL := true
+BOARD_USES_SEPERATED_AUDIO_INPUT := true
+BOARD_USES_SEPERATED_VOIP := true
+QCOM_FM_ENABLED := true
+
+# Bluetooth
+BOARD_HAVE_BLUETOOTH_QCOM := true
+BLUETOOTH_HCI_USE_MCT := true
+
+# Camera
+BOARD_NEEDS_MEMORYHEAPPMEM := true
+TARGET_RELEASE_CPPFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
+USE_DEVICE_SPECIFIC_CAMERA := true
+
+# Charger
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
+
+# CMHW
+BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
+
+# Graphics
+TARGET_DISPLAY_INSECURE_MM_HEAP := true
+
+# Media
+TARGET_NO_ADAPTIVE_PLAYBACK := true
+
+# Radio
+BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
+BOARD_RIL_NO_CELLINFOLIST := true
+BOARD_USES_LEGACY_MMAP := true
+
+# Recovery
+BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
+TARGET_RECOVERY_DEVICE_DIRS += device/htc/evita
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+
+# Release tools
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
+
+# SELinux
+-include device/qcom/sepolicy/sepolicy.mk
+
+BOARD_SEPOLICY_DIRS += \
+    device/htc/evita/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    akmd.te \
+    ewtzmud.te \
+    kernel.te
+
+# Wifi
+BOARD_HAS_QCOM_WLAN := true
+BOARD_WLAN_DEVICE := qcwcn
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+TARGET_USES_WCNSS_CTRL := true
+TARGET_USES_QCOM_WCNSS_QMI := true
+WIFI_DRIVER_FW_PATH_AP := "ap"
+WIFI_DRIVER_FW_PATH_STA := "sta"
+WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/prima_wlan/parameters/fwpath"
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+# inherit from the proprietary version
+-include vendor/htc/s4-common/BoardConfigVendor.mk
 
 # Require bootloader version
 TARGET_BOARD_INFO_FILE ?= device/htc/evita/board-info.txt
