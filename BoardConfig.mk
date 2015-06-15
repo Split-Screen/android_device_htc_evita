@@ -24,8 +24,59 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-# Inherit from common msm8960
--include device/htc/msm8960-common/BoardConfigCommon.mk
+BOARD_VENDOR := htc
+
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := MSM8960
+TARGET_NO_BOOTLOADER := true
+
+# Platform
+TARGET_BOARD_PLATFORM := msm8960
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
+
+# Architecture
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := krait
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
+
+# Flags
+COMMON_GLOBAL_CFLAGS += -DHTCLOG
+
+# Fonts
+EXTENDED_FONT_FOOTPRINT := true
+
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := true
+
+# Audio
+BOARD_USES_ALSA_AUDIO := true
+BOARD_USES_LEGACY_ALSA_AUDIO := true
+
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+
+# Use dlmalloc instead of jemalloc for mallocs
+MALLOC_IMPL := dlmalloc
+
+# Graphics
+BOARD_EGL_CFG := device/htc/evita/configs/egl.cfg
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+TARGET_DISPLAY_USE_RETIRE_FENCE := true
+TARGET_USES_C2D_COMPOSITION := true
+TARGET_USES_ION := true
+USE_OPENGL_RENDERER := true
+
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
+# Power
+TARGET_POWERHAL_VARIANT := qcom
+
+# Recovery
+TARGET_RECOVERY_DEVICE_MODULES += chargeled
 
 LOCAL_PATH := device/htc/evita
 
