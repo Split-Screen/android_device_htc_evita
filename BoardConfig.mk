@@ -62,7 +62,7 @@ BOARD_HAVE_BLUETOOTH := true
 MALLOC_IMPL := dlmalloc
 
 # Graphics
-BOARD_EGL_CFG := device/htc/evita/configs/egl.cfg
+BOARD_EGL_CFG := device/htc/evita/prebuilt/vendor/lib/egl/egl.cfg
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_USES_C2D_COMPOSITION := true
@@ -78,9 +78,7 @@ TARGET_POWERHAL_VARIANT := evita
 # Recovery
 TARGET_RECOVERY_DEVICE_MODULES += chargeled
 
-LOCAL_PATH := device/htc/evita
-
-TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := device/htc/evita/include
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80400000
@@ -109,7 +107,7 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 
 # CMHW
-BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
+BOARD_HARDWARE_CLASS := device/htc/evita/cmhw
 
 # Graphics
 TARGET_DISPLAY_INSECURE_MM_HEAP := true
@@ -118,7 +116,7 @@ TARGET_DISPLAY_INSECURE_MM_HEAP := true
 TARGET_NO_ADAPTIVE_PLAYBACK := true
 
 # Radio
-BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
+BOARD_RIL_CLASS := ../../../device/htc/evita/ril
 BOARD_RIL_NO_CELLINFOLIST := true
 BOARD_USES_LEGACY_MMAP := true
 
@@ -128,7 +126,7 @@ TARGET_RECOVERY_DEVICE_DIRS += device/htc/evita
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 # Release tools
-TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := device/htc/evita
 
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
