@@ -208,4 +208,12 @@ BOARD_VOLD_MAX_PARTITIONS := 37
 
 # Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
-TARGET_RECOVERY_FSTAB := device/htc/evita/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/htc/evita/rootdir/fstab.qcom
+
+# TWRP
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_INCLUDE_CRYPTO := true
+TW_NO_SCREEN_BLANK := true
+TW_THEME := portrait_hdpi

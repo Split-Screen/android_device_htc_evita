@@ -1,0 +1,18 @@
+# System
+#firmware_dsps     vfat    /dev/block/platform/msm_sdcc.1/by-name/dsps
+#firmware_wcnss    vfat    /dev/block/platform/msm_sdcc.1/by-name/wcnss
+#firmware_q6       vfat    /dev/block/platform/msm_sdcc.1/by-name/adsp
+#firmware_radio    vfat    /dev/block/platform/msm_sdcc.1/by-name/radio
+/boot              emmc    /dev/block/platform/msm_sdcc.1/by-name/boot
+/misc              emmc    /dev/block/platform/msm_sdcc.1/by-name/misc
+/recovery          emmc    /dev/block/platform/msm_sdcc.1/by-name/recovery
+/system            ext4    /dev/block/platform/msm_sdcc.1/by-name/system
+/cache             ext4    /dev/block/platform/msm_sdcc.1/by-name/cache
+/devlog            ext4    /dev/block/platform/msm_sdcc.1/by-name/devlog
+/data              ext4    /dev/block/platform/msm_sdcc.1/by-name/userdata    flags=encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
+
+# SDCard
+/sdcard            vfat    /dev/block/mmcblk0p36                              flags=display="SDCard";settingsstorage
+
+# USB
+/usb-otg           vfat    /dev/block/sda1          /dev/block/sda            flags=display="USB";storage;wipeingui;removable
