@@ -26,3 +26,11 @@ persist.sys.isUsbOtgEnabled=true
 # UMS
 persist.sys.usb.config=mtp
 ro.vold.umsdirtyratio=40
+
+# Hardware
+ro.device.chipset=Qualcomm MSM8960 Snapdragon S4
+ro.device.cpu=ARMv7 Dual-Core 1.5 GHz Krait
+ro.device.gpu=Adreno 225
+ro.device.front_cam=1.3 MP (1280x960)
+ro.device.rear_cam=8 MP (3264x2448)
+ro.device.screen_res=4.7" 1280x720 pixels (~312 ppi)
