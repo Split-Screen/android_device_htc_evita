@@ -20,5 +20,5 @@ PRODUCT_MANUFACTURER := HTC
 # Device overrides
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=evita \
-    PRIVATE_BUILD_DESC="3.18.502.6 CL131981 release-keys" \
-    BUILD_FINGERPRINT=cingular_us/evita/evita:4.1.1/JRO03C/131981.6:user/release-keys
+    PRIVATE_BUILD_DESC="5.18.502.1 CL285445 release-keys" \
+    BUILD_FINGERPRINT=htc/cingular_us/evita:4.2.2/JDQ39/285445.1:user/release-keys
