@@ -180,7 +180,7 @@ PRODUCT_PACKAGES += \
     gps.msm8960
 
 PRODUCT_COPY_FILES += \
-    device/htc/evita/gps/gps.conf:system/etc/gps.conf
+    device/htc/evita/prebuilt/etc/gps.conf:system/etc/gps.conf
 
 # Recovery
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
