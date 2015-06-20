@@ -1,6 +1,6 @@
 # Common HTC 8960 init script
 
-import init.qcom.usb.rc
+import init.evita.usb.rc
 
 on early-init
     mkdir /mnt/usbdisk 0755 system system
@@ -33,10 +33,10 @@ on fs
     mkdir /firmware_q6 0771 system system
 
     # mount all mmc partitions
-    mount_all /fstab.qcom
+    mount_all /fstab.evita
 
     # Enable zRAM
-    swapon_all /fstab.qcom
+    swapon_all /fstab.evita
 
     mkdir /data/tombstones 0771 system system
     symlink /data/tombstones /tombstones

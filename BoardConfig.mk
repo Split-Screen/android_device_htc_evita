@@ -83,9 +83,9 @@ TARGET_SPECIFIC_HEADER_PATH := device/htc/evita/include
 # Kernel
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=evita
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01700000
-TARGET_KERNEL_SOURCE := kernel/htc/msm8960
+TARGET_KERNEL_SOURCE := kernel/htc/evita
 
 # Audio
 AUDIO_FEATURE_ENABLED_FM := true
@@ -160,7 +160,7 @@ TARGET_BOARD_INFO_FILE ?= device/htc/evita/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := evita
 
 # Kernel
-TARGET_KERNEL_CONFIG := elite_defconfig
+TARGET_KERNEL_CONFIG := evita_defconfig
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/evita/bluetooth
@@ -208,7 +208,7 @@ BOARD_VOLD_MAX_PARTITIONS := 37
 
 # Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
-TARGET_RECOVERY_FSTAB := device/htc/evita/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/htc/evita/rootdir/fstab.evita
 
 # TWRP
 BOARD_HAS_NO_REAL_SDCARD := true

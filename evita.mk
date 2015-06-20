@@ -165,9 +165,9 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.qcom.usb.rc \
-    init.qcom.rc \
-    ueventd.qcom.rc
+    init.evita.usb.rc \
+    init.evita.rc \
+    ueventd.evita.rc
 
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh
@@ -285,8 +285,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/evita/overlay
 
 # Boot ramdisk setup
 PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.target.rc
+    fstab.evita
 
 # NFCEE access control
 PRODUCT_COPY_FILES += \
