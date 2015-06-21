@@ -173,7 +173,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Density
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
-PRODUCT_LOCALES += en_US xhdpi
 
 # Permissions
 PRODUCT_COPY_FILES += \
