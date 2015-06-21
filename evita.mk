@@ -114,6 +114,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y
 
+# Low-ram
+PRODUCT_PROPERTY_OVERRIDES += \
+    config.disable_atlas=true \
+    dalvik.vm.jit.codecachesize=0 \
+    ro.config.low_ram=true \
+    ro.config.max_starting_bg=8 \
+    ro.sys.fw.bg_apps_limit=16
+
 # Extra
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=true \
