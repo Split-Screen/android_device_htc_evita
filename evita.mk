@@ -83,6 +83,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
+# Default Properties
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    persist.sys.root_access=3 \
+    ro.adb.secure=0 \
+    ro.secure=0
+
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.mode=endfire \
@@ -125,6 +131,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Extra
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=true \
+    persist.sys.root_access=1 \
+    ro.adb.secure=0 \
+    ro.secure=0 \
     ro.setupwizard.enable_bypass=1 \
     ro.com.google.locationfeatures=1
 
