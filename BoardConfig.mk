@@ -117,6 +117,9 @@ BOARD_VENDOR := htc
 # Mallocs
 MALLOC_IMPL := dlmalloc
 
+# pac optimizations
+PAC_LOW_RAM_DEVICE := true
+
 # Libril
 BOARD_PROVIDES_LIBRIL := true
 
