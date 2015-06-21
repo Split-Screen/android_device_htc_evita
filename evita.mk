@@ -105,6 +105,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.mdpcomp.logs=0 \
     debug.sf.hw=1 \
     persist.hwc.mdpcomp.enable=true \
+    persist.sys.force_highendgfx=true \
     ro.opengles.version=131072 \
     ro.sf.lcd_density=320
 
