@@ -119,8 +119,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.checkjni=false \
-    dalvik.vm.lockprof.threshold=500 \
-    dalvik.vm.dexopt-flags=m=y
+    dalvik.vm.dexopt-flags=m=y \
+    dalvik.vm.lockprof.threshold=500
 
 # Low-ram
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -132,13 +132,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Extra
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
     persist.sys.isUsbOtgEnabled=true \
     persist.sys.root_access=1 \
     ro.adb.secure=0 \
+    ro.com.google.locationfeatures=1 \
+    ro.debuggable=1 \
     ro.ksm.default=1 \
     ro.secure=0 \
-    ro.setupwizard.enable_bypass=1 \
-    ro.com.google.locationfeatures=1
+    ro.setupwizard.enable_bypass=1
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
