@@ -21,7 +21,7 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=evita
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=evita androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01700000
 TARGET_KERNEL_SOURCE := kernel/htc/evita
 TARGET_KERNEL_CONFIG := evita_defconfig
