@@ -133,6 +133,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=true \
     persist.sys.root_access=1 \
     ro.adb.secure=0 \
+    ro.ksm.default=1 \
     ro.secure=0 \
     ro.setupwizard.enable_bypass=1 \
     ro.com.google.locationfeatures=1
