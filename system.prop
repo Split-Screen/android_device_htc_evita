@@ -23,6 +23,12 @@ ro.kernel.android.checkjni=0
 ro.kernel.checkjni=0
 ro.ril.disable.power.collapse=0
 
+# Network
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+net.ppp0.dns1=8.8.8.8
+net.ppp0.dns2=8.8.4.4
+
 # Hardware
 ro.device.chipset=Qualcomm MSM8960 Snapdragon S4
 ro.device.cpu=ARMv7 Dual-Core 1.5 GHz Krait
