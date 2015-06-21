@@ -1,13 +1,13 @@
 
-# RIL properties
-mobiledata.interfaces=rmnet0,rmnet1
-ro.telephony.default_network=9
+# RIL
 DEVICE_PROVISIONED=1
-telephony.lteOnGsmDevice=1
-rild.libpath=/system/lib/libril-qc-qmi-1.so
+mobiledata.interfaces=rmnet0,rmnet1
 rild.libargs=-d /dev/smd0
+rild.libpath=/system/lib/libril-qc-qmi-1.so
 ro.ril.fast.dormancy.rule=2
+ro.telephony.default_network=9
 ro.telephony.ril_class=HTCQualcommRIL
+telephony.lteOnGsmDevice=1
 
 # Tweaks
 persist.htc.checkin.errorreport=0

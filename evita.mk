@@ -118,6 +118,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.checkjni=false \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y
 
@@ -207,6 +208,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/bin/akmd:/system/bin/akmd \
     device/htc/evita/prebuilt/bin/charging:/system/bin/charging \
+    device/htc/evita/prebuilt/bin/ewtzmud:/system/bin/ewtzmud \
     device/htc/evita/prebuilt/bin/hci_qcomm_init:/system/bin/hci_qcomm_init \
     device/htc/evita/prebuilt/bin/mm-qcamera-daemon:/system/bin/mm-qcamera-daemon \
     device/htc/evita/prebuilt/bin/mpdecision:/system/bin/mpdecision \
