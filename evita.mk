@@ -69,8 +69,7 @@ PRODUCT_PACKAGES += \
 
 # Filesystem
 PRODUCT_PACKAGES += \
-    make_ext4fs \
-    setup_fs
+    make_ext4fs
 
 # FM
 PRODUCT_PACKAGES += \
