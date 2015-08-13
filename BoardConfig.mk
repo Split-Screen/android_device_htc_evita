@@ -43,7 +43,6 @@ BLUETOOTH_HCI_USE_MCT := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/evita/bluetooth
 
 # Graphics
-BOARD_EGL_CFG := device/htc/evita/prebuilt/vendor/lib/egl/egl.cfg
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_USES_C2D_COMPOSITION := true
