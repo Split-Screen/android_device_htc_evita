@@ -6,10 +6,10 @@
 /boot              emmc    /dev/block/platform/msm_sdcc.1/by-name/boot
 /misc              emmc    /dev/block/platform/msm_sdcc.1/by-name/misc
 /recovery          emmc    /dev/block/platform/msm_sdcc.1/by-name/recovery
-/system            ext4    /dev/block/platform/msm_sdcc.1/by-name/system
-/cache             ext4    /dev/block/platform/msm_sdcc.1/by-name/cache
-/devlog            ext4    /dev/block/platform/msm_sdcc.1/by-name/devlog
-/data              ext4    /dev/block/platform/msm_sdcc.1/by-name/userdata    flags=encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
+/system            auto    /dev/block/platform/msm_sdcc.1/by-name/system
+/cache             auto    /dev/block/platform/msm_sdcc.1/by-name/cache
+/devlog            auto    /dev/block/platform/msm_sdcc.1/by-name/devlog
+/data              auto    /dev/block/platform/msm_sdcc.1/by-name/userdata    flags=encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
 
 # SDCard
 /sdcard            vfat    /dev/block/mmcblk0p36                              flags=display="SDCard";settingsstorage
