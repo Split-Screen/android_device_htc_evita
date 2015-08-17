@@ -67,10 +67,6 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
-# Filesystem
-PRODUCT_PACKAGES += \
-    make_ext4fs
-
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
@@ -80,13 +76,15 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
+    make_ext4fs \
     com.android.future.usb.accessory
 
 # Default Properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    persist.sys.root_access=3 \
-    ro.adb.secure=0 \
-    ro.secure=0
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.usb.config=mtp \
+    ro.adb.secure=0
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -121,7 +119,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-flags=m=y \
     dalvik.vm.lockprof.threshold=500
 
-# Low-ram
+# Low-RAM
 PRODUCT_PROPERTY_OVERRIDES += \
     config.disable_atlas=true \
     dalvik.vm.jit.codecachesize=0 \
@@ -131,16 +129,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Extra
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.service.adb.enable=1 \
-    persist.service.debuggable=1 \
+    ro.setupwizard.enable_bypass=1 \
     persist.sys.isUsbOtgEnabled=true \
-    persist.sys.root_access=1 \
-    ro.adb.secure=0 \
-    ro.com.google.locationfeatures=1 \
-    ro.debuggable=1 \
-    ro.ksm.default=1 \
-    ro.secure=0 \
-    ro.setupwizard.enable_bypass=1
+    ro.com.google.locationfeatures=1
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -149,7 +140,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # UMS
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp \
     ro.vold.umsdirtyratio=40
 
 # WiFi
@@ -204,7 +194,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:/system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:/system/etc/media_codecs_google_video.xml
 
-# Binary
+# Executable
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/bin/akmd:/system/bin/akmd \
     device/htc/evita/prebuilt/bin/charging:/system/bin/charging \

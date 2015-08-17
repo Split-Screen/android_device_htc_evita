@@ -28,10 +28,10 @@ TARGET_KERNEL_CONFIG := evita_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-cortex-a15
 
 # Audio
-AUDIO_FEATURE_ENABLED_FM := true
 BOARD_USES_ALSA_AUDIO := true
-BOARD_USES_FLUENCE_INCALL := true
 BOARD_USES_LEGACY_ALSA_AUDIO := true
+AUDIO_FEATURE_ENABLED_FM := true
+BOARD_USES_FLUENCE_INCALL := true
 BOARD_USES_SEPERATED_AUDIO_INPUT := true
 BOARD_USES_SEPERATED_VOIP := true
 QCOM_FM_ENABLED := true
@@ -104,11 +104,7 @@ BOARD_USES_LEGACY_MMAP := true
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/htc/evita/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    akmd.te \
-    ewtzmud.te \
-    kernel.te
+BOARD_SEPOLICY_UNION += akmd.te ewtzmud.te kernel.te
 
 # Vendor
 BOARD_VENDOR := htc
@@ -116,7 +112,7 @@ BOARD_VENDOR := htc
 # Mallocs
 MALLOC_IMPL := dlmalloc
 
-# pac optimizations
+# PAC optimizations
 PAC_LOW_RAM_DEVICE := true
 
 # Libril
