@@ -193,6 +193,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:/system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:/system/etc/media_codecs_google_video.xml
 
+ifeq ($(TARGET_CUSTOM_SYSTEM_FORMAT),true)
+PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/etc/format.sh:/install/bin/format.sh \
+    device/htc/evita/rootdir/fstab.f2fs:/root/fstab.evita
+endif
+
 # Executable
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/bin/akmd:/system/bin/akmd \
