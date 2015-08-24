@@ -12,7 +12,7 @@
 /data              auto    /dev/block/platform/msm_sdcc.1/by-name/userdata    flags=encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
 
 # SDCard
-/sdcard            vfat    /dev/block/mmcblk0p36                              flags=display="SDCard";settingsstorage
+/sdcard            auto    /dev/block/mmcblk0p36                              flags=display="SDCard";settingsstorage
 
 # USB
-/usb-otg           vfat    /dev/block/sda1          /dev/block/sda            flags=display="USB";storage;wipeingui;removable
+/usb-otg           auto    /dev/block/sda1          /dev/block/sda            flags=display="USB";storage;wipeingui;removable
