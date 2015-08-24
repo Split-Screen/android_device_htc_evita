@@ -12,6 +12,7 @@
 /dev/block/platform/msm_sdcc.1/by-name/recovery    /recovery          emmc    defaults                                                                recoveryonly
 /dev/block/platform/msm_sdcc.1/by-name/system      /system            ext4    ro,noatime,barrier=0                                                    wait
 /dev/block/platform/msm_sdcc.1/by-name/devlog      /devlog            ext4    noatime,nosuid,nodev,noauto_da_alloc,barrier=0                          wait
+/dev/block/platform/msm_sdcc.1/by-name/devlog      /devlog            f2fs    noatime,nosuid,nodev,nodiratime,inline_xattr,inline_data,flush_merge    wait
 /dev/block/platform/msm_sdcc.1/by-name/cache       /cache             ext4    noatime,nosuid,nodev,noauto_da_alloc,barrier=0                          wait
 /dev/block/platform/msm_sdcc.1/by-name/cache       /cache             f2fs    noatime,nosuid,nodev,nodiratime,inline_xattr,inline_data,flush_merge    wait
 /dev/block/platform/msm_sdcc.1/by-name/userdata    /data              ext4    noatime,nosuid,nodev,noauto_da_alloc,barrier=0                          wait,formattable,nonremovable,encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
