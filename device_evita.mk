@@ -54,6 +54,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/evita/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x
 
+# Custom format
+ifeq ($(TARGET_CUSTOM_SYSTEM_FORMAT),true)
+PRODUCT_COPY_FILES += \
+    device/htc/evita/configs/format.sh:/install/bin/format.sh \
+    device/htc/evita/rootdir/etc/fstab.f2fs:/root/fstab.evita
+endif
+
 # Media config
 PRODUCT_COPY_FILES += \
     device/htc/evita/configs/media_profiles.xml:system/etc/media_profiles.xml
