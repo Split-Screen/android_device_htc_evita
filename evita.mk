@@ -74,6 +74,11 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio
 
+# IPv6 tethering
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes
+
 # Misc
 PRODUCT_PACKAGES += \
     make_ext4fs \
