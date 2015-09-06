@@ -250,6 +250,10 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/thermald.conf:system/etc/thermald.conf \
     device/htc/evita/prebuilt/vendor/lib/libqc-opt.so:/system/vendor/lib/libqc-opt.so
 
+# BSOD Killer
+PRODUCT_COPY_FILES += \
+    device/htc/evita/prebuilt/etc/init.d/89bsod:/system/etc/init.d/89bsod
+
 # NFC
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/nfcee_access.xml:/system/etc/nfcee_access.xml \
