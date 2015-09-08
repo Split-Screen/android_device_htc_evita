@@ -14,6 +14,9 @@ on early-init
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/vfs_cache_pressure 85
 
+    # Set iosched
+    setprop sys.io.scheduler bfq
+
     # Set performance profile
     setprop sys.perf.profile 1
 
