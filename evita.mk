@@ -215,6 +215,7 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/bin/mpdecision:/system/bin/mpdecision \
     device/htc/evita/prebuilt/bin/netmgrd:/system/bin/netmgrd \
     device/htc/evita/prebuilt/bin/qmuxd:/system/bin/qmuxd \
+    device/htc/evita/prebuilt/bin/radish:/system/bin/radish \
     device/htc/evita/prebuilt/bin/rmt_storage:/system/bin/rmt_storage \
     device/htc/evita/prebuilt/bin/thermald:/system/bin/thermald
 
