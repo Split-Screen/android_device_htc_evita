@@ -137,9 +137,6 @@ BOARD_USES_QCOM_HARDWARE := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Flags
-COMMON_GLOBAL_CFLAGS += -DHTCLOG
-
 # Media
 TARGET_NO_ADAPTIVE_PLAYBACK := true
 
@@ -157,6 +154,9 @@ TARGET_SPECIFIC_HEADER_PATH := device/htc/evita/include
 
 # Charger
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
+
+# Libc extensions
+BOARD_PROVIDES_ADDITIONAL_BIONIC_STATIC_LIBS += libc_htc_symbols
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
