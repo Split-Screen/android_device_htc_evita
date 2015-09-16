@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    init.evita.power.rc \
     init.evita.usb.rc \
     init.evita.rc \
     ueventd.evita.rc \
