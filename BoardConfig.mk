@@ -137,6 +137,9 @@ BOARD_USES_QCOM_HARDWARE := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# WebView version
+PREBUILT_WEBVIEW_VERSION := beta
+
 # Media
 TARGET_NO_ADAPTIVE_PLAYBACK := true
 
