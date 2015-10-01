@@ -210,7 +210,6 @@ endif
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/bin/akmd:/system/bin/akmd \
     device/htc/evita/prebuilt/bin/charging:/system/bin/charging \
-    device/htc/evita/prebuilt/bin/ewtzmud:/system/bin/ewtzmud \
     device/htc/evita/prebuilt/bin/hci_qcomm_init:/system/bin/hci_qcomm_init \
     device/htc/evita/prebuilt/bin/mm-qcamera-daemon:/system/bin/mm-qcamera-daemon \
     device/htc/evita/prebuilt/bin/mpdecision:/system/bin/mpdecision \
