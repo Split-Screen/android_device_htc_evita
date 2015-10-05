@@ -21,7 +21,7 @@ TARGET_CPU_VARIANT := krait
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=none androidboot.hardware=evita androidboot.selinux=permissive
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01700000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 TARGET_KERNEL_SOURCE := kernel/htc/evita
 TARGET_KERNEL_CONFIG := evita_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro-4.9-cortex-a15
