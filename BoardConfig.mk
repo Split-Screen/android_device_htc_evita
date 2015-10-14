@@ -146,6 +146,9 @@ TARGET_NO_ADAPTIVE_PLAYBACK := true
 # Boot-Animation
 TARGET_BOOTANIMATION_TEXTURE_CACHE := false
 
+# GPS
+TARGET_GPS_HAL_PATH := device/htc/evita/gps
+
 # CMHW
 BOARD_HARDWARE_CLASS := device/htc/evita/cmhw
 
