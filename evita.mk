@@ -84,6 +84,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     make_ext4fs \
     libstlport \
+    libhtc_symbols \
     libboringssl-compat \
     com.android.future.usb.accessory
 
