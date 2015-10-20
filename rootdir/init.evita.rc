@@ -5,6 +5,9 @@ on early-init
     mkdir /mnt/usbdisk 0755 system system
 
 on init
+    # Boringssl-compat
+    export LD_PRELOAD "/system/lib/libboringssl-compat.so"
+
     # For backwards compatibility
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0

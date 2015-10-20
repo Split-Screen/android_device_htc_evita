@@ -83,6 +83,7 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     make_ext4fs \
+    libboringssl-compat \
     com.android.future.usb.accessory
 
 # Default Properties
