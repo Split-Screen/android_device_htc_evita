@@ -153,6 +153,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
 
+# WiFi AP
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.disableWifiApFirmwareReload=true
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
