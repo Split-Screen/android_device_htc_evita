@@ -143,6 +143,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.data.qmi.adb_logmask=0 \
     ro.baseband.arch=msm \
     ro.telephony.call_ring.multiple=0
 
