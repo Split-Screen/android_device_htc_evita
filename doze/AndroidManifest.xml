@@ -15,7 +15,7 @@
         android:targetSdkVersion="21"/>
 
     <application
-        android:label="SamsungDoze"
+        android:label="HTCDoze"
         android:persistent="true">
 
         <receiver android:name="com.cyanogenmod.settings.device.BootCompletedReceiver">
@@ -25,8 +25,8 @@
             </intent-filter>
         </receiver>
 
-        <service android:name="com.cyanogenmod.settings.device.SamsungDozeService"
-                 android:permission="SamsungDozeService">
+        <service android:name="com.cyanogenmod.settings.device.HTCDozeService"
+                 android:permission="HTCDozeService">
         </service>
 
         <activity
