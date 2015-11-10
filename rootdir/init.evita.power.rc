@@ -1,8 +1,6 @@
 
 on early-init
-    write /sys/module/msm_thermal/core_control/enabled 0
     write /sys/devices/system/cpu1/cpu1/online 1
-    write /sys/module/msm_thermal/core_control/enabled 1
 
     # Set up KSM
     write /sys/kernel/mm/ksm/deferred_timer 1

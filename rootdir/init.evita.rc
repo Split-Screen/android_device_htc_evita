@@ -277,12 +277,6 @@ service rmt_storage /system/bin/rmt_storage modem_st1 modem_st2 recovery radio_c
     user root
     group system
 
-service thermald /system/bin/thermald
-    class core
-    user root
-    group root
-    disabled
-
 service time_daemon /system/bin/time_daemon
     user root
     group root
@@ -315,9 +309,6 @@ on property:init.svc.bootanim=stopped
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
-
-on property:persist.thermal.monitor=true
-    start thermald
 
 on property:persist.timed.enable=true
     start time_daemon

@@ -160,10 +160,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
-# Thermal
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.thermal.monitor=true
-
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.bt.hci_transport=smd
@@ -219,8 +215,7 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/bin/netmgrd:/system/bin/netmgrd \
     device/htc/evita/prebuilt/bin/qmuxd:/system/bin/qmuxd \
     device/htc/evita/prebuilt/bin/radish:/system/bin/radish \
-    device/htc/evita/prebuilt/bin/rmt_storage:/system/bin/rmt_storage \
-    device/htc/evita/prebuilt/bin/thermald:/system/bin/thermald
+    device/htc/evita/prebuilt/bin/rmt_storage:/system/bin/rmt_storage
 
 # WiFi
 PRODUCT_COPY_FILES += \
@@ -254,10 +249,9 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/libacdbloader.so:/system/lib/libacdbloader.so \
     device/htc/evita/prebuilt/lib/libaudcal.so:/system/lib/libaudcal.so
 
-# Qualcomm & Thermal
+# Qualcomm
 PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
-    device/htc/evita/prebuilt/etc/thermald.conf:system/etc/thermald.conf \
     device/htc/evita/prebuilt/vendor/lib/libqc-opt.so:/system/vendor/lib/libqc-opt.so
 
 # BSOD Killer
