@@ -1,15 +1,16 @@
-on boot
-    write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
-    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
+on init
     write /sys/class/android_usb/android0/iSerial ${ro.serialno}
-    write /sys/class/android_usb/android0/f_mass_storage/inquiry_string "HTC Phone                0000"
     write /sys/class/android_usb/android0/f_rndis/manufacturer HTC
     write /sys/class/android_usb/android0/f_rndis/vendorID 0bb4
     write /sys/class/android_usb/android0/f_rndis/wceis 1
 
+on boot
+    write /sys/class/android_usb/android0/iManufacturer HTC
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
+    write /sys/class/android_usb/android0/f_mass_storage/inquiry_string HTC
+
 # Charging
 on property:sys.usb.config=charging
-    stop adbd
     write /sys/class/android_usb/android0/enable 0
     write /sys/class/android_usb/android0/idVendor 0bb4
     write /sys/class/android_usb/android0/idProduct 0ff9
