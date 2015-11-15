@@ -304,9 +304,6 @@ on property:bluetooth.hciattach=true
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
 
-on property:init.svc.bootanim=stopped
-    start qcom-post-boot
-
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
