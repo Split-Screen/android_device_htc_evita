@@ -18,6 +18,7 @@ enum {
     PROFILE_POWER_SAVE = 0,
     PROFILE_BALANCED,
     PROFILE_HIGH_PERFORMANCE,
+    PROFILE_BIAS_POWER_SAVE,
     PROFILE_MAX
 };
 
@@ -79,5 +80,19 @@ static power_profile profiles[PROFILE_MAX] = {
         .target_loads = "80",
         .target_loads_off = "80",
         .scaling_max_freq = 1728000,
+    },
+    [PROFILE_BIAS_POWER_SAVE] = {
+        .boost = 0,
+        .boostpulse_duration = 0,
+        .go_hispeed_load = 90,
+        .go_hispeed_load_off = 90,
+        .hispeed_freq = 972000,
+        .hispeed_freq_off = 972000,
+        .io_is_busy = 0,
+        .min_sample_time = 60000,
+        .sampling_down_factor = 100000,
+        .target_loads = "95 1512000:99",
+        .target_loads_off = "95 1512000:99",
+        .scaling_max_freq = 1512000,
     },
 };
