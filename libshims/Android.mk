@@ -20,3 +20,12 @@ LOCAL_SRC_FILES    := htc_log.c
 LOCAL_MODULE       := libshim_log
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 include $(BUILD_SHARED_LIBRARY)
+
+
+# libqc-opt.so
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES        := icu53.c
+LOCAL_SHARED_LIBRARIES := libicuuc libicui18n
+LOCAL_MODULE           := libshim_qcopt
+LOCAL_MODULE_CLASS     := SHARED_LIBRARIES
+include $(BUILD_SHARED_LIBRARY)
