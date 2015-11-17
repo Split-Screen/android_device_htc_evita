@@ -112,9 +112,6 @@ BOARD_SEPOLICY_DIRS += device/htc/evita/sepolicy
 # Vendor
 BOARD_VENDOR := htc
 
-# Mallocs
-MALLOC_IMPL := dlmalloc
-
 # PAC optimizations
 PAC_LOW_RAM_DEVICE := true
 
