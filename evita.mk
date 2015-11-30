@@ -83,11 +83,9 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     HTCDoze \
-    make_ext4fs \
     libstlport \
     libhtc_symbols \
-    libboringssl-compat \
-    com.android.future.usb.accessory
+    libboringssl-compat
 
 # Default Properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
