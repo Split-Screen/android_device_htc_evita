@@ -75,11 +75,14 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_log
+
 # Misc
 PRODUCT_PACKAGES += \
     HTCDoze \
     libstlport \
-    libhtc_symbols \
     libboringssl-compat
 
 # Default Properties

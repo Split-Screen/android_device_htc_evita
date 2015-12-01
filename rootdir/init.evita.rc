@@ -6,7 +6,10 @@ on early-init
 
 on init
     # Boringssl-compat
-    export LD_PRELOAD "/system/lib/libboringssl-compat.so:/system/lib/libhtc_symbols.so"
+    export LD_PRELOAD /system/lib/libboringssl-compat.so
+
+    # Shims
+    export LD_SHIM_LIBS "/system/lib/liblog.so|libshim_log.so"
 
     # For backwards compatibility
     symlink /sdcard /mnt/sdcard
