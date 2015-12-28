@@ -79,7 +79,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_camera \
     libshim_log \
-    libshim_qcopt
+    libshim_qcopt \
+    libshim_sensors
 
 # Misc
 PRODUCT_PACKAGES += \
