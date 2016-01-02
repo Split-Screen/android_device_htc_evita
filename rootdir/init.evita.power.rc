@@ -13,18 +13,20 @@ on enable-low-power
     write /sys/module/pm_8x60/modes/cpu0/standalone_power_collapse/idle_enabled 1
     write /sys/module/pm_8x60/modes/cpu1/standalone_power_collapse/idle_enabled 1
     write /sys/module/pm_8x60/modes/cpu0/power_collapse/idle_enabled 1
+    write /sys/devices/system/cpu/cpu0/online 1
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor ondemand
 
     chown system system /sys/devices/system/cpu/cpu0/online
     chown system system /sys/devices/system/cpu/cpu1/online
     chmod 664 /sys/devices/system/cpu/cpu0/online
     chmod 664 /sys/devices/system/cpu/cpu1/online
-    write /sys/devices/system/cpu/cpu0/online 1
-    write /sys/devices/system/cpu/cpu1/online 1
 
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
     chown system system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
     chown system system /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor ondemand
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor ondemand
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 384000
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq 384000
 
@@ -44,15 +46,9 @@ on enable-low-power
     write /sys/module/cpu_boost/parameters/input_boost_freq 1134000
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
-    chown system system /sys/devices/platform/kgsl-2d0.0/kgsl/kgsl-2d0/pwrscale/trustzone/governor
-    chown system system /sys/devices/platform/kgsl-2d1.0/kgsl/kgsl-2d1/pwrscale/trustzone/governor
-    chown system system /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor
-    chmod 664 /sys/devices/platform/kgsl-2d0.0/kgsl/kgsl-2d0/pwrscale/trustzone/governor
-    chmod 664 /sys/devices/platform/kgsl-2d1.0/kgsl/kgsl-2d1/pwrscale/trustzone/governor
-    chmod 664 /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor
-    write /sys/devices/platform/kgsl-2d0.0/kgsl/kgsl-2d0/pwrscale/trustzone/governor ondemand
-    write /sys/devices/platform/kgsl-2d1.0/kgsl/kgsl-2d1/pwrscale/trustzone/governor ondemand
-    write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor ondemand
+    chown system system /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor
+    chmod 664 /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor
+    write /sys/class/kgsl/kgsl-3d0/pwrscale/trustzone/governor ondemand
 
     rm /data/system/default_values
 
