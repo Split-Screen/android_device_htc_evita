@@ -310,8 +310,7 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/lib/libimu.so:/system/lib/libimu.so \
     device/htc/evita/prebuilt/lib/libmllite.so:/system/lib/libmllite.so \
     device/htc/evita/prebuilt/lib/libmlplatform.so:/system/lib/libmlplatform.so \
-    device/htc/evita/prebuilt/lib/libmpl.so:/system/lib/libmpl.so \
-    device/htc/evita/prebuilt/lib/libmpl_jni.so:/system/lib/libmpl_jni.so
+    device/htc/evita/prebuilt/lib/libmpl.so:/system/lib/libmpl.so
 
 # Chromatix
 PRODUCT_COPY_FILES += \
@@ -398,15 +397,7 @@ PRODUCT_COPY_FILES += \
     device/htc/evita/prebuilt/etc/firmware/a225_pfp.fw:/system/etc/firmware/a225_pfp.fw \
     device/htc/evita/prebuilt/etc/firmware/a225_pm4.fw:/system/etc/firmware/a225_pm4.fw \
     device/htc/evita/prebuilt/etc/firmware/a225p5_pm4.fw:/system/etc/firmware/a225p5_pm4.fw \
-    device/htc/evita/prebuilt/etc/firmware/leia_pfp_470.fw:/system/etc/firmware/leia_pfp_470.fw \
-    device/htc/evita/prebuilt/etc/firmware/leia_pm4_470.fw:/system/etc/firmware/leia_pm4_470.fw \
-    device/htc/evita/prebuilt/etc/firmware/vidc.b00:/system/etc/firmware/vidc.b00 \
-    device/htc/evita/prebuilt/etc/firmware/vidc.b01:/system/etc/firmware/vidc.b01 \
-    device/htc/evita/prebuilt/etc/firmware/vidc.b02:/system/etc/firmware/vidc.b02 \
-    device/htc/evita/prebuilt/etc/firmware/vidc.b03:/system/etc/firmware/vidc.b03 \
-    device/htc/evita/prebuilt/etc/firmware/vidc.mdt:/system/etc/firmware/vidc.mdt \
-    device/htc/evita/prebuilt/etc/firmware/vidc_1080p.fw:/system/etc/firmware/vidc_1080p.fw \
-    device/htc/evita/prebuilt/etc/firmware/vidcfw.elf:/system/etc/firmware/vidcfw.elf
+    device/htc/evita/prebuilt/etc/firmware/vidc_1080p.fw:/system/etc/firmware/vidc_1080p.fw
 
 # Widevine
 PRODUCT_COPY_FILES += \
