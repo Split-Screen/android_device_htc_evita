@@ -84,6 +84,7 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
+    Snap \
     HTCDoze \
     libstlport \
     libboringssl-compat
