@@ -86,8 +86,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap \
     HTCDoze \
-    libstlport \
-    libboringssl-compat
+    libstlport
 
 # Default Properties
 ADDITIONAL_DEFAULT_PROPERTIES += \
