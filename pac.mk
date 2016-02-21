@@ -1,5 +1,5 @@
 # CM Stuff
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/pac/config/common_full_phone.mk)
 
 # Device Stuff
 $(call inherit-product, device/htc/evita/evita.mk)
@@ -8,11 +8,11 @@ $(call inherit-product, device/htc/evita/evita.mk)
 PRODUCT_RELEASE_NAME := evita
 
 # Bootanimation
-TARGET_BOOTANIMATION_NAME := 720
+PAC_BOOTANIMATION_NAME := 720
 
 # Device Naming
 PRODUCT_DEVICE := evita
-PRODUCT_NAME := cm_evita
+PRODUCT_NAME := pac_evita
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := One XL
 PRODUCT_MANUFACTURER := HTC
