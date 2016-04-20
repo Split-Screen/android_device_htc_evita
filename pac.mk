@@ -8,7 +8,8 @@ $(call inherit-product, device/htc/evita/evita.mk)
 PRODUCT_RELEASE_NAME := evita
 
 # Bootanimation
-PAC_BOOTANIMATION_NAME := 720
+PRODUCT_COPY_FILES += \
+    device/lge/d851/prebuilt/media/bootanimation.zip:system/media/bootanimation.zip
 
 # Device Naming
 PRODUCT_DEVICE := evita
